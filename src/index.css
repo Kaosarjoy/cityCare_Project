@@ -3,7 +3,31 @@
 @import "tailwindcss";
 @import "daisyui/daisyui.css";
 
+@plugin "daisyui/theme" {
+  themes: light --default;
+  name: "mytheme";
+  default: true; /* set as default */
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light; /* color of browser-provided UI */
+
+ --color-primary: #570df8;
+ --color-secondary: #f000b8;
+  accent: #37cdbe;
+  neutral: #3d4451;
+  --color-base-100: #ffffff;
+  --color-info: #2094f3;
+  --color-success: #009485;
+  --color-warning: #ff9900;
+  --color-error: #ff5724;
+  --color-primary-focus: #4506cb;
+  --color-primary-content: #ffffff;
+  --color-secondary-focus: #bd0091;
+  --color-secondary-content: #ffffff;
+  
+}
+
 body{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 }
+

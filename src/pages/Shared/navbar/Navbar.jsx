@@ -45,10 +45,10 @@ const Navbar = () => {
 
             <div className="navbar-end gap-2">
                 <Link to='/login'>
-                    <button className="btn btn-outline btn-primary btn-sm md:btn-md">Login</button>
+                    <button className="btn bg-primary text-primary-content hover:bg-primary-focus hover:text-primary-content-focus">Login</button>
                 </Link>
                 <Link to='/register'>
-                    <button className="btn btn-primary btn-sm md:btn-md">Register</button>
+                    <button className="btn bg-secondary text-secondary-content hover:bg-secondary-focus hover:text-secondary-content-focus">Register</button>
                 </Link>
             </div>
         </div>
