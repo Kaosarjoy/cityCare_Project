@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router";
 import logoImg from '../../../assets/logo.png';
+import ThemeToggle from "../../../Theme/Theme.jsx";
 
 const Navbar = () => {
     // NavLink-এর জন্য একটি কমন ক্লাস ফাংশন (Active link বোঝার জন্য)
@@ -12,6 +13,7 @@ const Navbar = () => {
             <li><NavLink to='/report' className={navLinkStyles}>Report</NavLink></li>
             <li><NavLink to='/sent-issues' className={navLinkStyles}>Sent Issues</NavLink></li>
             <li><NavLink to='/coverage' className={navLinkStyles}>Coverage</NavLink></li>
+            <li><NavLink to="/beStaf" className={navLinkStyles}>Be a Staf</NavLink></li>
         </>
     );
 
@@ -44,6 +46,9 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end gap-2">
+               <div>
+                 <ThemeToggle></ThemeToggle>
+               </div>
                 <Link to='/login'>
                     <button className="btn bg-primary text-primary-content hover:bg-primary-focus hover:text-primary-content-focus">Login</button>
                 </Link>
