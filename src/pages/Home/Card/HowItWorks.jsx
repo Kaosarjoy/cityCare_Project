@@ -6,134 +6,143 @@ import {
   CreditCard, 
   UserCheck, 
   Settings, 
-  ArrowRight,
-  MousePointerClick
+  MousePointerClick,
+  Sparkles
 } from 'lucide-react';
 
 // --- JSON Data for Features ---
 const systemSteps = [
   {
     id: 1,
-    title: "Authentication",
-    description: "Citizens register with their details. Social login (Google) is also available for quick access.",
-    icon: <LogIn className="text-blue-500" />,
+    title: "Seamless Authentication",
+    description: "Citizens register with their details. Social login (Google) is also available for instant access to the platform.",
+    icon: <LogIn className="text-blue-400" />,
     role: "Citizen / Admin / Staff",
-    color: "bg-blue-50"
+    glow: "group-hover:shadow-blue-500/20"
   },
   {
     id: 2,
-    title: "Report an Issue",
-    description: "Citizens submit reports for broken streetlights or potholes with photos, category, and location.",
-    icon: <PlusCircle className="text-green-500" />,
+    title: "Report with Precision",
+    description: "Submit detailed reports for broken streetlights or potholes with live photos, specific categories, and GPS location.",
+    icon: <PlusCircle className="text-emerald-400" />,
     role: "Citizen",
-    color: "bg-green-50"
+    glow: "group-hover:shadow-emerald-500/20"
   },
   {
     id: 3,
-    title: "Admin Assignment",
-    description: "Admin reviews the reported issues and assigns them to available Staff members.",
-    icon: <UserCheck className="text-purple-500" />,
+    title: "Smart Admin Assignment",
+    description: "Our admin dashboard allows quick review and direct assignment of issues to the most relevant staff members.",
+    icon: <UserCheck className="text-purple-400" />,
     role: "Admin",
-    color: "bg-purple-50"
+    glow: "group-hover:shadow-purple-500/20"
   },
   {
     id: 4,
-    title: "Priority Boost",
-    description: "Citizens can pay 100tk to boost an issue to 'High' priority, moving it to the top of the list.",
-    icon: <CreditCard className="text-yellow-600" />,
+    title: "Priority Accelerator",
+    description: "Boost your issue to 'High' priority for just 100tk. Boosted issues move to the top of the processing queue.",
+    icon: <CreditCard className="text-yellow-400" />,
     role: "Citizen",
-    color: "bg-yellow-50"
+    glow: "group-hover:shadow-yellow-500/20"
   },
   {
     id: 5,
-    title: "Staff Action",
-    description: "Staff updates the issue status from 'Pending' to 'In-Progress' and finally to 'Resolved'.",
-    icon: <Settings className="text-orange-500" />,
+    title: "Real-time Staff Action",
+    description: "Staff members manage their tasks efficiently, updating progress from 'Pending' to 'Resolved' instantly.",
+    icon: <Settings className="text-orange-400" />,
     role: "Staff",
-    color: "bg-orange-50"
+    glow: "group-hover:shadow-orange-500/20"
   },
   {
     id: 6,
-    title: "Issue Resolution",
-    description: "Once resolved, the tracking timeline is updated, and the citizen can see the final status.",
-    icon: <CheckCircle className="text-emerald-500" />,
+    title: "Full Resolution Cycle",
+    description: "Complete transparency with a full tracking timeline. Citizens receive updates once the issue is closed.",
+    icon: <CheckCircle className="text-cyan-400" />,
     role: "System / Staff",
-    color: "bg-emerald-50"
+    glow: "group-hover:shadow-cyan-500/20"
   }
 ];
 
 const HowItWorks = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#0f172a] py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      
+      {/* Dynamic Background Blurs */}
+      <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
+      <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] -z-10"></div>
+
       {/* Header Section */}
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-          How <span className="text-indigo-600">CityCare</span> Works
+      <div className="max-w-4xl mx-auto text-center mb-24">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-6">
+          <Sparkles size={14} /> The CityCare Journey
+        </div>
+        <h1 className="text-5xl font-black text-white sm:text-6xl tracking-tight mb-6">
+          How <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">CityCare</span> Works
         </h1>
-        <p className="mt-4 text-xl text-gray-600">
-          A step-by-step guide to our Public Infrastructure Issue Reporting System.
+        <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          A streamlined digital ecosystem designed for transparency, speed, and efficient public service management.
         </p>
       </div>
 
-      {/* Steps Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Steps Grid with Connector Line (Hidden on mobile) */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 relative">
+        
         {systemSteps.map((step, index) => (
           <div 
             key={step.id} 
-            className="relative group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
+            className={`group relative bg-white/5 backdrop-blur-xl rounded-[32px] p-10 border border-white/10 hover:border-white/20 transition-all duration-500 ${step.glow} hover:shadow-2xl hover:-translate-y-2`}
           >
-            {/* Step Number */}
-            <div className="absolute -top-4 -left-4 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">
+            {/* Step Number Badge */}
+            <div className="absolute -top-5 -right-5 w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-xl transform rotate-12 group-hover:rotate-0 transition-transform duration-500">
               {index + 1}
             </div>
 
-            {/* Icon & Role Badge */}
-            <div className="flex justify-between items-start mb-6">
-              <div className={`p-4 rounded-xl ${step.color}`}>
+            {/* Icon & Role */}
+            <div className="flex justify-between items-start mb-8">
+              <div className="p-4 bg-white/10 rounded-2xl border border-white/10 group-hover:bg-white/15 transition-colors">
                 {React.cloneElement(step.icon, { size: 32 })}
               </div>
-              <span className="text-[10px] font-bold px-2 py-1 bg-gray-100 text-gray-600 rounded-md uppercase">
+              <span className="text-[10px] font-black px-3 py-1.5 bg-white/5 text-gray-400 rounded-lg border border-white/10 uppercase tracking-tighter">
                 {step.role}
               </span>
             </div>
 
             {/* Content */}
-            <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-indigo-600 transition-colors">
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
               {step.title}
             </h3>
-            <p className="text-gray-600 leading-relaxed text-sm">
+            <p className="text-gray-400 leading-relaxed text-sm font-medium mb-6">
               {step.description}
             </p>
 
-            {/* Hover Decorator */}
-            <div className="mt-6 flex items-center text-indigo-500 font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-              Learn More <ArrowRight size={16} className="ml-2" />
-            </div>
+            {/* Bottom Accent */}
+            <div className="h-1 w-12 bg-gradient-to-r from-blue-500 to-transparent rounded-full opacity-50 group-hover:w-full transition-all duration-700"></div>
           </div>
         ))}
       </div>
 
-      {/* Bottom Summary Section */}
-      <div className="max-w-4xl mx-auto mt-20 bg-indigo-900 rounded-3xl p-8 md:p-12 text-white overflow-hidden relative">
-        <div className="relative z-10">
-          <h2 className="text-3xl font-bold mb-4">Ready to improve your city?</h2>
-          <p className="text-indigo-100 mb-8 max-w-lg">
-            Join thousands of citizens making their neighborhood better, one report at a time. 
-            Premium members get unlimited reports and priority support.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-white text-indigo-900 px-8 py-3 rounded-full font-bold hover:bg-indigo-50 transition-colors flex items-center gap-2">
-              <MousePointerClick size={20} /> Get Started
-            </button>
-            <button className="bg-transparent border border-indigo-400 px-8 py-3 rounded-full font-bold hover:bg-indigo-800 transition-colors">
-              View All Issues
-            </button>
+      {/* Modern CTA Footer */}
+      <div className="max-w-5xl mx-auto mt-32">
+        <div className="relative group p-12 rounded-[40px] bg-gradient-to-br from-indigo-600/20 to-blue-600/20 backdrop-blur-3xl border border-white/10 text-center overflow-hidden">
+          {/* Decorative shapes inside CTA */}
+          <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
+
+          <div className="relative z-10">
+            <h2 className="text-4xl font-black text-white mb-6 tracking-tight">Ready to transform your neighborhood?</h2>
+            <p className="text-gray-400 mb-10 max-w-xl mx-auto text-lg font-medium">
+              Join our community of proactive citizens. Get premium access for unlimited reports and high-priority resolutions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <button className="group px-10 py-4 bg-white text-indigo-950 font-black rounded-2xl hover:bg-blue-50 transition-all flex items-center gap-3 shadow-xl shadow-blue-500/10">
+                <MousePointerClick size={20} className="group-hover:animate-bounce" /> 
+                Get Started Now
+              </button>
+              <button className="px-10 py-4 bg-transparent border border-white/20 text-white font-black rounded-2xl hover:bg-white/10 transition-all">
+                Explore All Issues
+              </button>
+            </div>
           </div>
         </div>
-        
-        {/* Abstract Background Shapes */}
-        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-64 h-64 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
-        <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-64 h-64 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
       </div>
     </div>
   );
