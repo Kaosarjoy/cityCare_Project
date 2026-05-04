@@ -1,4 +1,5 @@
 import Banner from "../../Home/Banner/Banner.jsx";
+import Brands from "../Brands/Brands.jsx";
 import HowItWorks from "../Card/HowItWorks.jsx";
 import ServiceCard from "../Card/ServiceCard.jsx";
 
@@ -10,6 +11,7 @@ const Home = () => {
            <Banner></Banner>
            <HowItWorks></HowItWorks>
            <ServiceCard></ServiceCard>
+           <Brands></Brands>
         </div>
     );
 };
