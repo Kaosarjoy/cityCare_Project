@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Rahim Uddin",
+    "role": "Citizen",
+    "rating": 5,
+    "comment": "This platform makes reporting city issues super easy. Now I can track everything in one place.",
+    "date": "2026-01-10"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "role": "Citizen",
+    "rating": 5,
+    "comment": "Very helpful system. Issue tracking is smooth and updates are real-time.",
+    "date": "2026-01-12"
+  },
+  {
+    "id": 3,
+    "name": "Karim Ahmed",
+    "role": "Staff",
+    "rating": 4,
+    "comment": "Assigned issues system is very organized. Easy to manage work.",
+    "date": "2026-01-14"
+  },
+  {
+    "id": 4,
+    "name": "Ayesha Rahman",
+    "role": "Citizen",
+    "rating": 5,
+    "comment": "Boost feature is amazing. My urgent issue got attention quickly.",
+    "date": "2026-01-15"
+  },
+  {
+    "id": 5,
+    "name": "Tanvir Hasan",
+    "role": "Admin",
+    "rating": 5,
+    "comment": "The dashboard and role management system is very powerful and clean.",
+    "date": "2026-01-16"
+  },
+  {
+    "id": 6,
+    "name": "Sadia Islam",
+    "role": "Citizen",
+    "rating": 4,
+    "comment": "Submitting issues is very simple. UI is also very user friendly.",
+    "date": "2026-01-18"
+  },
+  {
+    "id": 7,
+    "name": "Md Rakib",
+    "role": "Staff",
+    "rating": 5,
+    "comment": "Status update system helps us work faster and more efficiently.",
+    "date": "2026-01-20"
+  },
+  {
+    "id": 8,
+    "name": "Fahim Khan",
+    "role": "Citizen",
+    "rating": 4,
+    "comment": "Good system for city service improvement. Tracking feature is helpful.",
+    "date": "2026-01-22"
+  },
+  {
+    "id": 9,
+    "name": "Mitu Akter",
+    "role": "Citizen",
+    "rating": 5,
+    "comment": "Loved the notification and update system. Everything is transparent.",
+    "date": "2026-01-23"
+  },
+  {
+    "id": 10,
+    "name": "Shakil Ahmed",
+    "role": "Admin",
+    "rating": 5,
+    "comment": "Staff assignment and issue control system is very well designed.",
+    "date": "2026-01-24"
+  },
+  {
+    "id": 11,
+    "name": "Jannat Sultana",
+    "role": "Citizen",
+    "rating": 4,
+    "comment": "Premium feature is useful for frequent users like me.",
+    "date": "2026-01-25"
+  },
+  {
+    "id": 12,
+    "name": "Imran Hossain",
+    "role": "Staff",
+    "rating": 5,
+    "comment": "Clear workflow from pending to resolved makes work very easy.",
+    "date": "2026-01-26"
+  }
+]

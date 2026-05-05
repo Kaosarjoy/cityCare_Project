@@ -31,3 +31,13 @@ body{
   font-optical-sizing: auto;
 }
 
+.swiper-slide-active {
+  transform: scale(1.05) ;
+  z-index: 10;
+}
+
+.swiper-slide-active div {
+  transform: scale(1.05);
+  opacity: 1 ;
+  filter: blur(0px) ;
+}
