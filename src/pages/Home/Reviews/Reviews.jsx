@@ -7,7 +7,7 @@ import ReviewCard from "./ReviewCard";
 
 const Reviews = ({ reviewsPromise }) => {
     const reviews = use(reviewsPromise);
-    console.log(reviews);
+    //console.log(reviews);
     return (
      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f172a]">
 
