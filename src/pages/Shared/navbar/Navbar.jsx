@@ -1,8 +1,12 @@
 import { Link, NavLink } from "react-router";
 import logoImg from '../../../assets/logo.png';
 import ThemeToggle from "../../../Theme/Theme.jsx";
-
+import NavbarSkeleton from "../../Skeleton/NavbarSkeleton.jsx";
 const Navbar = () => {
+    const loading = false ; 
+    if(loading){
+        return <NavbarSkeleton></NavbarSkeleton>
+    }
     // NavLink-এর জন্য একটি কমন ক্লাস ফাংশন (Active link বোঝার জন্য)
     const navLinkStyles = ({ isActive }) => 
         isActive ? "text-primary font-bold underline" : "";

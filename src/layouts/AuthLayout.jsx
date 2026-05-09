@@ -1,12 +1,13 @@
-import logoImg from '../assets/logo.png'
-
+import { Outlet } from 'react-router';
+import Navbar from '../pages/Shared/navbar/Navbar'
+import Footer from '../pages/Shared/footer/Footer'
 const AuthLayout = () => {
     return (
-        <div>
-            <img src={logoImg} alt="Logo" className='h-[150px] w-[140px]' />
-            <h2>Welcome to Our App</h2>
-            <p>Please log in to continue</p>
-            {/* Add your login form or authentication components here */}
+        <div className='max-w-7xl mx-auto'>
+          <Navbar></Navbar>
+          <Outlet></Outlet>
+          <Footer></Footer>
+
         </div>
     );
 };
